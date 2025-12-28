@@ -1,12 +1,16 @@
+import Link from 'next/link';
+import { FiShoppingCart } from 'react-icons/fi';
+import Navlink from '../buttons/Navlink';
 import Container from './Container';
 import Logo from './Logo';
-import Navlink from './Navlink';
 
 export default function Header() {
   const links = (
     <>
       <Navlink href={'/'}>Home</Navlink>
-      <Navlink href={'/about'}>About</Navlink>
+      <Navlink href={'/products'}>Products</Navlink>
+      <Navlink href={'/blog'}>Blog</Navlink>
+      <Navlink href={'/contact'}>Contact</Navlink>
     </>
   );
   return (
@@ -48,8 +52,14 @@ export default function Header() {
             <ul className='menu menu-horizontal px-1'>{links}</ul>
           </div>
           {/* End */}
-          <div className='navbar-end'>
-            <a className='btn'>Button</a>
+          <div className='navbar-end space-x-4'>
+            <Link href={'/cart'} className='btn btn-primary'>
+              {' '}
+              <FiShoppingCart />{' '}
+            </Link>
+            <Link className='btn btn-primary btn-outline' href={'/login'}>
+              Login
+            </Link>
           </div>
         </nav>
       </Container>

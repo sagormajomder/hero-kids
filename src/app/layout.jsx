@@ -15,10 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${poppins.className} antialiased`}>
+      <body
+        className={`${poppins.className} grid grid-rows-[auto_1fr_auto] min-h-dvh`}>
         <Header />
-        <main>
-          <Container>{children}</Container>
+        <main className='min-w-0'>
+          <Container className='h-full'>{children}</Container>
         </main>
         <Footer />
       </body>
