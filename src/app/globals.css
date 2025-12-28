@@ -25,3 +25,7 @@
 }
 
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+
+.active {
+  @apply bg-primary rounded-md text-base-200;
+}

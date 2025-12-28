@@ -1,5 +1,6 @@
+import Container from '@/components/layouts/Container';
 import Footer from '@/components/layouts/Footer';
-import Navbar from '@/components/layouts/Navbar';
+import Header from '@/components/layouts/Header';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 
@@ -15,10 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${poppins.className} antialiased`}>
-        <header className='py-2 md:w-11/12 mx-auto'>
-          <Navbar />
-        </header>
-        <main className='py-2 md:w-11/12 mx-auto'>{children}</main>
+        <Header />
+        <main>
+          <Container>{children}</Container>
+        </main>
         <Footer />
       </body>
     </html>
