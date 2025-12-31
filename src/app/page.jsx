@@ -1,7 +1,9 @@
-export default function Home() {
+import Banner from '@/components/homepage/Banner';
+
+export default function HomePage() {
   return (
-    <div className='flex h-full items-center justify-center '>
-      <button className='btn btn-primary'>Test Button</button>
-    </div>
+    <section className=''>
+      <Banner />
+    </section>
   );
 }
