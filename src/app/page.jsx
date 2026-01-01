@@ -1,9 +1,10 @@
 import Banner from '@/components/homepage/Banner';
+import Container from '@/components/layouts/Container';
 
 export default function HomePage() {
   return (
-    <section className=''>
+    <Container className='h-full'>
       <Banner />
-    </section>
+    </Container>
   );
 }

@@ -25,9 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className} grid grid-rows-[auto_1fr_auto] min-h-dvh`}>
         <Header />
-        <main className='min-w-0'>
-          <Container className='h-full'>{children}</Container>
-        </main>
+        <main className='min-w-0'>{children}</main>
         <Footer />
       </body>
     </html>
